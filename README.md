@@ -1,5 +1,5 @@
 # flux_example
 
 Step1. npm install 
-\n
+<br>
 Step2. npm start
