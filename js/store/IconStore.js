@@ -6,8 +6,8 @@ var assign = require("object-assign");
 var _data = [];
 _data.push({imageSrc:'imgs/ic_mail.png'});
 
-function _addIcon() {
-	_data.push({imageSrc:'imgs/ic_mail.png'});
+function _addIcon(imageSrc) {
+	_data.push({imageSrc:imageSrc});
 }
 
 function _removeicon() {
@@ -35,7 +35,7 @@ var IconStore = assign({}, EventEmitter.prototype, {
 TestDispatcher.register(function(action){
 	switch(action.actionType){
 		case "AddIcon":
-			_addIcon();
+			_addIcon(action.imageSrc);
 			IconStore.notifyChange();
 			break;
 		case "RemoveIcon":

@@ -1,9 +1,10 @@
 var TestDispatcher = require("../dispatcher/TestDispatcher");
 
 var IconProcessAction = {
-	AddIcon: function(){
+	AddIcon: function(imgSrc){
 		TestDispatcher.dispatch({
-			actionType: "AddIcon"
+			actionType: "AddIcon",
+			imageSrc: imgSrc
 		});
 	},
 

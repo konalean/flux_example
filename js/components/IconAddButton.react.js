@@ -2,8 +2,8 @@ var React = require('react');
 var IconProcessAction = require("../action/IconProcessAction");
 
 var IconAddButton = React.createClass({
-	handleAddIcon: function(){
-		IconProcessAction.AddIcon();
+	handleAddIcon: function(imgSrc, event){
+		IconProcessAction.AddIcon(imgSrc);
 	},
 	handleRemoveIcon: function(){
 		IconProcessAction.RemoveIcon();
@@ -13,7 +13,8 @@ var IconAddButton = React.createClass({
 	},
 
 	render: function() {
-		return <button onClick={this.handleAddIcon}>Add Icon</button>;
+		var boundItemClick = this.handleAddIcon.bind(this, 'imgs/ic_mail.png');
+		return <button onClick={boundItemClick}>Add Icon</button>;
 	}
 });
 module.exports = IconAddButton;
