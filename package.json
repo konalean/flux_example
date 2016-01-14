@@ -1,0 +1,25 @@
+{
+  "name": "flux_example",
+  "version": "1.0.0",
+  "description": "kon's flux example",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "kon",
+  "license": "MIT",
+  "devDependencies": {
+    "browserify": "^13.0.0",
+    "reactify": "^1.1.1",
+    "watchify": "^3.7.0"
+  },
+  "dependencies": {
+    "react": "^0.14.6",
+	"flux": "^2.0.0",
+	"object-assign": "^1.0.0",
+    "react-dom": "^0.14.6"
+  },
+   "scripts": {
+    "start": "browserify -t reactify -o ./js/bundle.js ./js/app.js"
+  }
+}
